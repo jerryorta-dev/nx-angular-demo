@@ -2,7 +2,9 @@
   "name": "@nx-angular-demo/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "s.todo.dev": "npx nx run todo:serve:development"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~18.0.0",
