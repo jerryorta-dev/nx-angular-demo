@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-angular-demo/shared-dlc": ["libs/shared/ui-design-library-components/src/index.ts"],
       "@nx-angular-demo/shared-domain": ["libs/shared/domain/src/index.ts"]
     }
   },
