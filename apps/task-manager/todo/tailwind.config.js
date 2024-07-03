@@ -10,6 +10,11 @@ module.exports = {
     join(__dirname, '../../../libs/shared/ui-design-library-components/src/**/**/!(*.spec).{ts,html}'),
     ...createGlobPatternsForDependencies(
       join(__dirname, '../../../libs/shared/ui-design-library-components/src')
+    ),
+
+    join(__dirname, '../../../libs/task-manager/ui-task-manager/src/**/**/!(*.spec).{ts,html}'),
+    ...createGlobPatternsForDependencies(
+      join(__dirname, '../../../libs/task-manager/ui-task-manager/src')
     )
   ],
   theme: {
