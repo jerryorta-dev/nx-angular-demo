@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'api',
+  displayName: 'todo-api',
   preset: '../../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
