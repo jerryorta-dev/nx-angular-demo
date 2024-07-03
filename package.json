@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "s.todo.dev": "npx nx run todo:serve:development",
-    "s.todo.api": "npx nx run todo-api:serve:development"
+    "s.todo.api": "npx nx run api:serve:development"
   },
   "private": true,
   "dependencies": {
