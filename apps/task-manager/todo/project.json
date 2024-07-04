@@ -17,9 +17,20 @@
         "tsConfig": "apps/task-manager/todo/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
+          "apps/task-manager/todo/src/assets",
           {
             "glob": "**/*",
             "input": "apps/task-manager/todo/public"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/task-manager/ui-task-manager/src/assets",
+            "output": "assets/ui-task-manager"
+          },
+          {
+            "glob": "**/*",
+            "input": "libs/shared/ui-design-library-components/src/assets",
+            "output": "assets/dlc"
           }
         ],
         "styles": ["apps/task-manager/todo/src/styles.scss"],
