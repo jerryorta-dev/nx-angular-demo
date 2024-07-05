@@ -34,7 +34,12 @@
           }
         ],
         "styles": ["apps/task-manager/todo/src/styles.scss"],
-        "scripts": []
+        "scripts": [],
+        "stylePreprocessorOptions": {
+          "includePaths": [
+            "libs/shared/ui-design-library-components/src/lib/themes"
+          ]
+        }
       },
       "configurations": {
         "production": {
