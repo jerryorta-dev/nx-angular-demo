@@ -896,3 +896,11 @@ nx affected:e2e</pre>
   encapsulation: ViewEncapsulation.None,
 })
 export class NxWelcomeComponent {}
+
+
+export const NX_WELCOME_ROUTE = [
+  {
+    path: '',
+    component: NxWelcomeComponent
+  }
+]
