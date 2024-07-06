@@ -2,7 +2,7 @@
   "name": "ui-task-manager",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/task-manager/ui-task-manager/src",
-  "prefix": "lib",
+  "prefix": "ui-task-manager",
   "projectType": "library",
   "tags": [],
   "targets": {

@@ -1,1 +1,14 @@
+
 <router-outlet></router-outlet>
+
+<mat-sidenav-container>
+  <mat-sidenav [fixedInViewport]="true" fixedTopGap="86" [opened]="false">
+    Foo
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ui-task-manager-header></ui-task-manager-header>
+    <div class="app-content" [style.top.px]="iOSCalc().contentTopPx">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

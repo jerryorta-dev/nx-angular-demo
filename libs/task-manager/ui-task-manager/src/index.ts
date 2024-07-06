@@ -1,1 +1,1 @@
-export * from './lib/ui-task-manager/ui-task-manager.component';
+export * from './lib/components/header/header.component';
