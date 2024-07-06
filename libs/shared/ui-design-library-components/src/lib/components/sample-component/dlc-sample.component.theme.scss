@@ -1,0 +1,31 @@
+@use "sass:map";
+@use "../../themes/core/color-vars" as color-vars;
+
+// CREATE THEME CONFIGS
+// CREATE THEME CONFIGS
+// CREATE THEME CONFIGS
+$default-light-theme: (
+  foreground: map.get(color-vars.$custom-light-theme, base),
+);
+
+$default-dark-theme: (
+  foreground: map.get(color-vars.$custom-dark-theme, base),
+);
+
+// MAP THEME TO VARS
+// MAP THEME TO VARS
+// MAP THEME TO VARS
+@mixin color-vars($theme) {
+  --dlc-sample-component-foreground: #{map.get($theme, foreground)};
+}
+
+// ASSIGN THEME TO VARS
+// ASSIGN THEME TO VARS
+// ASSIGN THEME TO VARS
+@mixin default-light-theme() {
+  @include color-vars($default-light-theme);
+}
+
+@mixin default-dark-theme() {
+  @include color-vars($default-dark-theme);
+}

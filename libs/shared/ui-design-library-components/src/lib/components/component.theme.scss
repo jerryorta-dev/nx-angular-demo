@@ -1,0 +1,10 @@
+
+@use 'sample-component/dlc-sample.component.theme' as sample;
+
+@mixin default-light-theme() {
+  @include sample.default-light-theme();
+}
+
+@mixin default-dark-theme() {
+  @include sample.default-dark-theme();
+}

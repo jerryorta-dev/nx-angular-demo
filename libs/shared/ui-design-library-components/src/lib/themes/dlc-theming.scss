@@ -2,6 +2,7 @@
 @use "sass:math";
 @use "core";
 @use "@angular/material" as mat;
+@use "../components/component.theme" as component;
 
 
 /**
@@ -15,7 +16,7 @@
   @include mat.core();
 
   // Define the theme object.
-  $todo-theme: mat.define-theme((
+  $mat-light-theme: mat.define-theme((
     color: (
       theme-type: light,
       primary: mat.$azure-palette,
@@ -30,7 +31,9 @@
   // Alternatively, you can import and @include the theme mixins for each component
   // that you are using.
   :root {
-    @include mat.all-component-themes($todo-theme);
+    // default light theme
+    @include mat.all-component-themes($mat-light-theme);
+    @include component.default-light-theme();
   }
 
   // Comment out the line below if you want to use the pre-defined typography utility classes.
@@ -43,22 +46,20 @@
   html, body {
     height: 100%;
   }
-  body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-  }
-
-
-  //@include theming.component-vars();
 
   body {
     margin: 0;
     padding: 0;
     overflow: hidden;
     height: 100%;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 
     // font basis
     @include core.pixel-to-rem-vars(16);
-    @include core.material-component-overrides($todo-theme);
+    @include core.material-component-overrides();
+  }
+
+  .default-dark-theme {
+    @include component.default-dark-theme();
   }
 }

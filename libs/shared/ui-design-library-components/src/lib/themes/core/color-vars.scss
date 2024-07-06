@@ -1,0 +1,41 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+$custom-light-theme: (
+  base: map.get( mat.$azure-palette , 50),
+
+  20: map.get( mat.$azure-palette , 20),
+
+  40: map.get( mat.$azure-palette , 40),
+
+  60: map.get( mat.$azure-palette , 60),
+
+  focus: map.get( mat.$azure-palette , 50),
+
+  base-contrast: map.get( mat.$azure-palette , 50),
+);
+
+
+$custom-dark-theme: (
+  base: map.get( mat.$blue-palette , 50),
+
+  20: map.get( mat.$blue-palette , 20),
+
+  40: map.get( mat.$blue-palette , 40),
+
+  60: map.get( mat.$blue-palette , 60),
+
+  focus: map.get( mat.$blue-palette , 50),
+
+  base-contrast: map.get( mat.$blue-palette , 50),
+);
+
+
+@mixin dlc-colors($theme) {
+  --dlc-color-base: #{map.get($theme, base)};
+  --dlc-color-20: #{map.get($theme, 20)};
+  --dlc-color-40: #{map.get($theme, 40)};
+  --dlc-color-60: #{map.get($theme, 60)};
+  --dlc-color-focus: #{map.get($theme, focus)};
+  --dlc-color-base-contrast: #{map.get($theme, base-contrast)};
+}

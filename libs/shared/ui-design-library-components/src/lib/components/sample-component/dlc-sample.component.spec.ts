@@ -1,16 +1,16 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {DesignLibraryComponentsComponent} from './design-library-components.component';
+import {DlcSampleComponent} from './dlc-sample.component';
 
 describe('DesignLibraryComponentsComponent', () => {
-  let component: DesignLibraryComponentsComponent;
-  let fixture: ComponentFixture<DesignLibraryComponentsComponent>;
+  let component: DlcSampleComponent;
+  let fixture: ComponentFixture<DlcSampleComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DesignLibraryComponentsComponent]
+      imports: [DlcSampleComponent]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(DesignLibraryComponentsComponent);
+    fixture = TestBed.createComponent(DlcSampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

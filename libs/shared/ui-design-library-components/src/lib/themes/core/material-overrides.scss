@@ -10,7 +10,7 @@
 }
 
 // Material component overrides
-@mixin material-component-overrides($theme) {
+@mixin material-component-overrides() {
 
   // BEGIN MATERIAL OVERRIDES
   // Tailwind incorrectly overrides material outline

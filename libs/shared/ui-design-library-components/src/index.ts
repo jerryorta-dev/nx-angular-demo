@@ -1,1 +1,1 @@
-export * from './lib/design-library-components/design-library-components.component';
+export * from './lib/components/sample-component/dlc-sample.component';
