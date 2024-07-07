@@ -1,5 +1,7 @@
-import {Component} from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {CommonModule} from '@angular/common';
+import { Store } from '@ngrx/store';
+import { selectMinWidth640Px } from '@nx-angular-demo/shared-domain';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +10,10 @@ import {CommonModule} from '@angular/common';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {}
+export class HomeComponent {
+  store = inject(Store);
+  selectMinWidth640Px = this.store.selectSignal(selectMinWidth640Px);
+}
 
 export const HOME_ROUTES = [
   {

@@ -21,7 +21,8 @@ export const ngPatInitialDeviceState: NgPatDeviceState = {
   handset: false,
   tablet: false,
 
-  isLargeScreen: false
+  isLargeScreen: false,
+  min640WidthPx: false
 };
 
 export const ngPatDeviceReducer = createReducer(

@@ -50,3 +50,10 @@ export const selectIsIOS = createSelector(
 
   }
 );
+
+export const selectMinWidth640Px = createSelector(
+  selectNgPatDeviceState,
+  (state: NgPatDeviceState) => {
+    return state.min640WidthPx;
+  }
+);

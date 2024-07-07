@@ -6,6 +6,9 @@ import { Action } from '@ngrx/store';
 import { map } from 'rxjs/operators';
 import * as DeviceActions from './device.actions';
 import { ngPatInitDevice, ngPatLoadDevices } from './device.actions';
+import { min640WidthPx } from './device.model';
+
+
 
 @Injectable()
 export class NgPatDeviceEffects implements OnInitEffects {
@@ -44,7 +47,8 @@ export class NgPatDeviceEffects implements OnInitEffects {
         Breakpoints.WebPortrait,
         Breakpoints.HandsetLandscape,
         Breakpoints.TabletLandscape,
-        Breakpoints.WebLandscape
+        Breakpoints.WebLandscape,
+        min640WidthPx
       ]).pipe(map((state: BreakpointState) => {
         const isPortrait = state.breakpoints[Breakpoints.HandsetPortrait] ||
           state.breakpoints[Breakpoints.TabletPortrait] ||
@@ -67,7 +71,7 @@ export class NgPatDeviceEffects implements OnInitEffects {
             xLarge: state.breakpoints[Breakpoints.XLarge],
             handset: state.breakpoints[Breakpoints.Handset],
             tablet: state.breakpoints[Breakpoints.Tablet],
-
+            min640WidthPx: state.breakpoints[min640WidthPx]
           }
         })
       }))

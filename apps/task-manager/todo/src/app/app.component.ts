@@ -1,7 +1,8 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, effect, inject, signal } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
 import { Store } from '@ngrx/store';
+import { selectMinWidth640Px } from '@nx-angular-demo/shared-domain';
 import { HeaderComponent, UiTaskMangerRouterLink } from '@nx-angular-demo/ui-task-manager';
 import { NxWelcomeComponent } from './pages/nx-welcome/nx-welcome.component';
 
@@ -20,6 +21,8 @@ export class AppComponent {
 
   sidenavOpen = signal(false);
 
+  selectMinWidth640Px = this.store.selectSignal(selectMinWidth640Px);
+
   routerLinks: UiTaskMangerRouterLink[] = [
     {
       label: 'Home',
@@ -30,5 +33,19 @@ export class AppComponent {
       route: '/welcome'
     }
   ];
+
+  constructor() {
+    effect(() => {
+      const minWidth640Px = this.selectMinWidth640Px();
+
+      /**
+       * When the screen width is greater than 640px, close the sidenav
+       * because the header links are displayed in the header.
+       */
+      if (minWidth640Px) {
+        this.sidenavOpen.set(false);
+      }
+    }, { allowSignalWrites: true })
+  }
 
 }

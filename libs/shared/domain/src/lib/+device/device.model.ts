@@ -18,6 +18,7 @@ export interface NgPatDeviceState {
   isLargeScreen: boolean;
 
   isLoaded: boolean;
+  min640WidthPx: boolean;
 }
 
 export interface UiIosNotchCalc {
@@ -25,3 +26,5 @@ export interface UiIosNotchCalc {
   paddingTopPx: number;
   contentTopPx: number;
 }
+
+export const min640WidthPx = '(min-width: 640px)';
