@@ -1,0 +1,7 @@
+:host {
+  @apply relative flex flex-row justify-start items-center pl-5 pr-2.5 bg-[--dlc-mat-primary-color] h-[56px] rounded-none text-[--dlc-mat-primary-color-95];
+
+  .activebutton {
+    @apply text-slate-300;
+  }
+}

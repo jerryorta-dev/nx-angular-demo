@@ -39,3 +39,8 @@ $custom-dark-theme: (
   --dlc-color-focus: #{map.get($theme, focus)};
   --dlc-color-base-contrast: #{map.get($theme, base-contrast)};
 }
+
+@mixin dlc-mat-colors($theme) {
+  --dlc-mat-primary-color: #{mat.get-theme-color($theme, primary, 50)};
+  --dlc-mat-primary-color-95: #{mat.get-theme-color($theme, primary, 95)};
+}

@@ -1,39 +1,26 @@
 $notch: 30px;
 
 :host {
-  display: block;
-  position: relative;
-  height: 100%;
+  @apply block relative h-full;
 
   mat-sidenav-container {
-    height: 100%;
+    @apply h-full;
 
     mat-sidenav-content {
-      display: flex;
-      flex-direction: column;
+      @apply flex flex-col;
     }
   }
 
   .app-content {
-    display: flex;
-    position: absolute;
-    top: 56px;
-    //bottom: 56px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    //overflow-y: scroll;
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: flex-start;
+    @apply flex flex-col flex-1 absolute top-[56px] bottom-0 left-0 right-0 overflow-y-auto;
+
 
     &__ios {
       top: 56px + $notch;
     }
 
     &__hide-footer {
-      bottom: 0;
+      @apply bottom-0;
     }
   }
 

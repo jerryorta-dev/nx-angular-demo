@@ -34,6 +34,7 @@
     // default light theme
     @include mat.all-component-themes($mat-light-theme);
     @include component.default-light-theme();
+    @include core.dlc-mat-colors($mat-light-theme);
   }
 
   // Comment out the line below if you want to use the pre-defined typography utility classes.
@@ -61,5 +62,6 @@
 
   .default-dark-theme {
     @include component.default-dark-theme();
+    @include core.dlc-mat-colors($mat-light-theme);
   }
 }

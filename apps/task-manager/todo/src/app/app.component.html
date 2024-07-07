@@ -3,7 +3,7 @@
     Foo
   </mat-sidenav>
   <mat-sidenav-content>
-    <ui-task-manager-header></ui-task-manager-header>
+    <ui-task-manager-header [routerLinks]="routerLinks"></ui-task-manager-header>
     <div class="app-content" [style.top.px]="iOSCalc().contentTopPx">
       <router-outlet></router-outlet>
     </div>
