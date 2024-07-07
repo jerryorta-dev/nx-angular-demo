@@ -1,0 +1,55 @@
+<div class="dlc-storybook-review-container__storybook-header">
+  <mat-form-field
+    class="dlc-storybook-review-container__storybook-header--autocomplete"
+    color="primary"
+    appearance="outline">
+    <mat-label>Select Theme</mat-label>
+    <mat-select [formControl]="themeFormControl" (selectionChange)="onSelect($event)">
+      @for (opt of themes; track opt) {
+      <mat-option [value]="opt.cssClass">
+        {{ opt.name }}
+      </mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <div class="flex-auto"></div>
+
+  @if (reviewStatus === reviewStatusEnum.DRAFT) {
+  <div class="dlc-storybook-review-container__storybook-header--status">DRAFT</div>
+  } @else if (reviewStatus === reviewStatusEnum.FINAL) {
+  <div class="dlc-storybook-review-container__storybook-header--status">FINAL</div>
+  } @else if (reviewStatus === reviewStatusEnum.PROTOTYPE) {
+  <div class="dlc-storybook-review-container__storybook-header--status">PROTOTYPE</div>
+  }
+</div>
+
+<div class="dlc-storybook-review-container__storybook-content">
+  <ng-content></ng-content>
+</div>
+<div class="dlc-storybook-review-container__storybook-footer">
+  <span class="dlc-storybook-review-container__storybook-footer--link" *ngIf="storybookFilePath">
+    Code:
+    <a
+      class="dlc-storybook-review-container__storybook-footer--link--a"
+      (click)="openGithub($event)"
+      >{{ storybookFilePath }}</a
+    >
+  </span>
+
+  <span class="dlc-storybook-review-container__storybook-footer--link" *ngIf="trackingNumber">
+    <a
+      class="dlc-storybook-review-container__storybook-footer--link--a"
+      (click)="openTracker($event)"
+      >{{ trackingNumber }}</a
+    >
+  </span>
+
+  <span class="dlc-storybook-review-container__storybook-footer--link" *ngIf="figmaUrl"
+    ><a
+      class="dlc-storybook-review-container__storybook-footer--link--a"
+      (click)="openFigma($event)"
+      >Figma</a
+    ></span
+  >
+</div>

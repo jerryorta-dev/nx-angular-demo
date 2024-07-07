@@ -2,13 +2,8 @@ import {Injectable} from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
 import {LinkTag} from '../html-helper/ng-pat-html-helper.model';
 import {NgPatHtmlHelperService} from '../html-helper/ng-pat-html-helper.service';
+import { ThemeConfig } from './theme-switcher.model';
 
-export interface ThemeConfig {
-  name: string;
-  cssClass: string;
-  isDark: boolean;
-  isDefault: boolean;
-}
 
 export function getDefaultThemeConfig(themes: ThemeConfig[]): ThemeConfig {
   return themes.find(theme => theme.isDefault) || themes[0];

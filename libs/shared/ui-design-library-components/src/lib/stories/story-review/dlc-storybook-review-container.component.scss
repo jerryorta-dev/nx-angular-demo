@@ -1,0 +1,127 @@
+$header-height: 80px;
+$footer-height: 40px;
+$review-text-color: rgba(255, 255, 255, 0.5);
+
+.dlc-storybook-review-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  //flex-direction: column;
+  //justify-content: flex-start;
+  //align-items: flex-start;
+  width: 100%;
+  height: 100%;
+
+  &__storybook-header {
+    position: relative;
+    height: $header-height;
+    padding-left: var(--20px);
+    padding-right: var(--20px);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #787878;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    color: $review-text-color;
+
+    &--autocomplete {
+      .mat-mdc-form-field-subscript-wrapper {
+        display: none;
+      }
+    }
+
+    &--status {
+      border: 1px solid #e0e0e0;
+      border-radius: var(--4px);
+      padding: var(--2px) var(--8px);
+      margin-right: var(--12px);
+      font-size: 12px;
+      height: 28px;
+      line-height: 24px;
+    }
+  }
+
+  &__draft {
+    .dlc-storybook-review-container__storybook-header {
+      &--status {
+        border-color: red;
+        color: red;
+      }
+    }
+  }
+
+  &__prototype {
+    .dlc-storybook-review-container__storybook-header {
+      &--status {
+        border-color: blue;
+        color: blue;
+      }
+    }
+  }
+
+  &__final {
+    .dlc-storybook-review-container__storybook-header {
+      &--status {
+        border-color: #01d001;
+        color: #01d001;
+      }
+    }
+  }
+
+  &__storybook-content {
+    position: absolute;
+    top: $header-height;
+    bottom: $footer-height;
+    left: 0;
+    right: 0;
+    display: block;
+    padding: var(--20px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    //background: lightgray;
+  }
+
+  &__storybook-footer {
+    position: absolute;
+    bottom: 0;
+    height: $footer-height;
+    padding-left: var(--20px);
+    padding-right: var(--20px);
+    padding-top: var(--5px);
+    padding-bottom: var(--5px);
+    border-top: 1px solid #787878;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+    &--link:not(:first-child) {
+      margin-left: var(--20px);
+    }
+
+    &--link {
+      color: $review-text-color;
+      font-size: var(--10px);
+
+      &--a {
+        display: inline-block;
+        text-decoration: underline;
+        cursor: pointer;
+        color: $review-text-color;
+      }
+    }
+  }
+
+  h4.review {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
