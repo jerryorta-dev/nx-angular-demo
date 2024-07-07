@@ -3,12 +3,12 @@ import type {StorybookConfig} from '@storybook/angular';
 const config: StorybookConfig = {
   stories: [
     // '../src/app/**/*.stories.@(js|jsx|ts|tsx|mdx)',
-    '../../../libs/shared/ui-design-library/src/**/*.stories.@(js|jsx|ts|tsx|mdx)'
+    '../../../libs/shared/ui-design-library-components/src/**/*.stories.@(js|jsx|ts|tsx|mdx)'
   ],
   addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],
   staticDirs: [
     {
-      from: '../../../libs/shared/ui-design-library/src/assets',
+      from: '../../../libs/shared/ui-design-library-components/src/assets',
       to: 'assets/dlc'
     }
   ],

@@ -5,7 +5,10 @@ const {join} = require('path');
 module.exports = {
   content: [
     join(__dirname, 'src/**/!(*.stories|*.spec).{ts,html}'),
-    ...createGlobPatternsForDependencies(__dirname)
+    ...createGlobPatternsForDependencies(__dirname),
+
+    join(__dirname, '../../libs/shared/ui-design-library-components/src/**/**/!(*.spec).{ts,html}'),
+    ...createGlobPatternsForDependencies(join(__dirname, '../../libs/shared/ui-design-library-components/src'))
   ],
   theme: {
     extend: {}

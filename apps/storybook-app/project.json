@@ -23,6 +23,9 @@
           }
         ],
         "styles": ["apps/storybook-app/src/styles.scss"],
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/shared/ui-design-library-components/src/lib/themes"]
+        },
         "scripts": []
       },
       "configurations": {
