@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output, signal } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { UiTaskMangerRouterLink } from './header.model';
@@ -12,6 +12,7 @@ import { UiTaskMangerRouterLink } from './header.model';
 })
 export class HeaderComponent {
 
+  routerLinks = input(<UiTaskMangerRouterLink[]>[]);
+  toggleSidenav = output()
 
-  routerLinks = input(<UiTaskMangerRouterLink[]>[])
 }

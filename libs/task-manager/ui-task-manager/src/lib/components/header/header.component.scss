@@ -1,7 +1,8 @@
 :host {
-  @apply relative flex flex-row justify-start items-center pl-5 pr-2.5 bg-[--dlc-mat-primary-color] h-[56px] rounded-none text-[--dlc-mat-primary-color-95];
+  @apply bg-white shadow;
 
-  .activebutton {
-    @apply text-slate-300;
+  .active-link {
+    @apply border-indigo-500 text-gray-900 #{!important};
   }
+
 }

@@ -13,16 +13,10 @@ $notch: 30px;
 
   .app-content {
     @apply flex flex-col flex-1 absolute top-[56px] bottom-0 left-0 right-0 overflow-y-auto;
-
-
-    &__ios {
-      top: 56px + $notch;
-    }
-
-    &__hide-footer {
-      @apply bottom-0;
-    }
   }
 
+  .active-link {
+    @apply bg-indigo-50 border-indigo-500 text-indigo-700 #{!important};
+  }
 
 }

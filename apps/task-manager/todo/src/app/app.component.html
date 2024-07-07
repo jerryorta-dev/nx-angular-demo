@@ -1,10 +1,17 @@
 <mat-sidenav-container>
-  <mat-sidenav [fixedInViewport]="true" fixedTopGap="86" [opened]="false">
-    Foo
+  <mat-sidenav [fixedInViewport]="true" [fixedTopGap]="fixedTopGap" [opened]="sidenavOpen()" (openedChange)="sidenavOpen.set($event)">
+    <div class="space-y-1 pb-4 pt-2">
+      @for(r of routerLinks; track r.route) {
+        <a [routerLink]="r.route"
+           (click)="sidenavOpen.set(false)"
+           routerLinkActive="active-link"
+           class="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700">{{r.label}}</a>
+      }
+    </div>
   </mat-sidenav>
   <mat-sidenav-content>
-    <ui-task-manager-header [routerLinks]="routerLinks"></ui-task-manager-header>
-    <div class="app-content" [style.top.px]="iOSCalc().contentTopPx">
+    <ui-task-manager-header [routerLinks]="routerLinks" (toggleSidenav)="sidenavOpen.set(!sidenavOpen())"></ui-task-manager-header>
+    <div class="app-content" [style.top.px]="fixedTopGap">
       <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>

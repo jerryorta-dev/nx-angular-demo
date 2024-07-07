@@ -1,9 +1,8 @@
-import { Component, inject, Signal } from '@angular/core';
+import { Component, inject, signal, Signal } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { HeaderComponent, UiTaskMangerRouterLink } from '@nx-angular-demo/ui-task-manager';
-import { selectIsIOS, UiIosNotchCalc } from '@nx-angular-demo/shared-domain';
 import { NxWelcomeComponent } from './pages/nx-welcome/nx-welcome.component';
 
 @Component({
@@ -17,12 +16,14 @@ export class AppComponent {
 
   store = inject(Store);
 
-  iOSCalc: Signal<UiIosNotchCalc> = this.store.selectSignal(selectIsIOS);
+  fixedTopGap = 64;
+
+  sidenavOpen = signal(false);
 
   routerLinks: UiTaskMangerRouterLink[] = [
     {
       label: 'Home',
-      route: '/'
+      route: '/home'
     },
     {
       label: 'Welcome',
