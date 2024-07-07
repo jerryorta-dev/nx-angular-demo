@@ -1,8 +1,17 @@
 import type {StorybookConfig} from '@storybook/angular';
 
 const config: StorybookConfig = {
-  stories: ['../src/app/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
+  stories: [
+    // '../src/app/**/*.stories.@(js|jsx|ts|tsx|mdx)',
+    '../../../libs/shared/ui-design-library/src/**/*.stories.@(js|jsx|ts|tsx|mdx)'
+  ],
   addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],
+  staticDirs: [
+    {
+      from: '../../../libs/shared/ui-design-library/src/assets',
+      to: 'assets/dlc'
+    }
+  ],
   framework: {
     name: '@storybook/angular',
     options: {}
