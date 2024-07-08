@@ -1,0 +1,10 @@
+{
+  "name": "task-manager-mobile",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "ecm",
+  "sourceRoot": "apps/evolving-cognition/mobile/src",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project evolving-cognition-mobile --web",
+  "targets": {}
+}
