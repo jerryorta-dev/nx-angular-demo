@@ -12,6 +12,14 @@ See the package.json to run the following comands:
 - `npm run storybook` to start the storybook server
 - `npm run build-storybook` to build the storybook app
 
+### Running Capacitor Commands
+
+Capacitorjs has it's own build architecture, so it is not managed by Nx, although it is part of the monorepo. To run capacitor commands, you need to navigate to the capacitorjs directory and run the commands there.
+
+- `cd apps/task-manager/capacitorjs`
+
+Then run the capacitor commands using `npx cap ...` as explained the capacitor documentation.
+
 ## Frameworks
 The monorepo contains the following frameworks:
 
