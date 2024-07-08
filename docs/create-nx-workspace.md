@@ -4,7 +4,7 @@
 npx create-nx-workspace@latest
 ```
 
-![[nx-cli-command-create-workspace.png]]
+![Create Nx Workspace](./images/nx-cli-command-create-workspace.png)
 
 ***Document as you work***
 
@@ -89,7 +89,7 @@ In root directory, replace contents of `.prettierrc` with
 
 ## Setup Tailwind in App
 
-![[set-up-tailwind.png]]
+![./images/set-up-tailwind.png](./images/set-up-tailwind.png)
 
 
 
@@ -105,16 +105,16 @@ nx add @nx/nest
 
 ### Create App
 
-![[nest-app-generate.png]]
+![nest-app-generate.png](./images/nest-app-generate.png)
 
 1. Use default configuration
 2. Name app `api`
 
-![[nest-app-config.png]]
+![nest-app-strict.png](./images/nest-app-strict.png)
 
 Fill in name and directory. This will allow a different app name from the directory name.
 
-![[nest-app-strict.png]]
+![nest-app-strict.png](./images/nest-app-strict.png)
 
 Select strict mode.
 
@@ -135,7 +135,7 @@ app.enableCors({
 });
 ```
 
-![[enable-cors.png]]
+![enable-cors.png](./images/enable-cors.png)
 
 ### Add npm script:
 
@@ -149,9 +149,9 @@ app.enableCors({
 
 
 
-![[create-domain-library.png]]
+![create-domain-library.png](./images/create-domain-library.png)
 
-![[configure-shared-domain.png]]
+![configure-shared-domain.png](./images/configure-shared-domain.png)
 
 ### Update .nx library config
 
@@ -166,7 +166,7 @@ app.enableCors({
 
 ## Create Design Library Components 
 
-![[create-domain-library.png]]
+![create-domain-library.png](./images/create-domain-library.png)
 
 Name: design-library-components
 directory: libs/shared/ui-design-library-components
@@ -198,10 +198,10 @@ join(__dirname, '../../../libs/shared/ui-design-library-components/src/**/**/!(*
 
 
 ### Add App domain
-![[create-app-domain.png]]
+![create-app-domain.png](./images/create-app-domain.png)
 
 Add UI to domain
-![[create-ui-library.png]]
+![create-ui-library.png](./images/create-ui-library.png)
 
 
 ### Add assets directory for ui-task-manager
@@ -355,7 +355,7 @@ npm i @angular/material
 npx nx g @angular/material:ng-add --project=todo
 ```
 
-![[add-material.png]]
+![add-material.png](./images/add-material.png)
 
 ### Move Tailwind base styles above mat.core
 
@@ -419,9 +419,9 @@ Configure Angular Material theme in `dlc-theme` mixin.
 ### Create Angular application
 
 
-![[create-storybook.png]]
+![create-storybook.png](./images/create-storybook.png)
 
-![[storybook-app-params.png]]
+![storybook-app-params.png](./images/storybook-app-params.png)
 
 ### Add Nx Storybook
 
@@ -437,7 +437,7 @@ Configure for Angular
 nx g @nx/angular:storybook-configuration storybook-app
 ```
 
-![[configure-storybook.png]]
+![configure-storybook.png](./images/configure-storybook.png)
 
 ### Update Storybook Configurations
 
@@ -572,7 +572,7 @@ export default defineConfig({
 ```
 
 
-Remove the JSON file `apps/task-manager/mobile/capacitor.config.json`, and create a file similar to this: [https://github.com/jerryorta-dev/nx-angular-demo/blob/main/apps/task-manager/mobile/capacitor.config.ts](https://github.com/jerryorta-dev/nx-angular-demo/blob/main/apps/task-manager/mobile/capacitor.config.ts)
+Remove the JSON file `apps/task-manager/mobile/capacitor.config.json`, and create a file similar to this: [https://github.com/jerryorta-dev/nx-angular-demo/blob/main/apps/task-manager/capacitorjs/capacitor.config.ts](https://github.com/jerryorta-dev/nx-angular-demo/blob/main/apps/task-manager/capacitorjs/capacitor.config.ts)
 
 ## Electronjs
 
