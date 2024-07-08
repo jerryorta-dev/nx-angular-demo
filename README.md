@@ -1,4 +1,29 @@
-# NxAngularDemo
+# Nx Angular Monorepo Architecture Sample
+
+This repo is an example of a monorepo architecture using Nx and Angular. It contains a simple todo application with a shared library and a backend API.
+
+See the package.json to run the following comands:
+
+- `npm run s.todo.dev` to start the development server for the todo app
+- `npm run b.todo.dev` to build the todo app for development
+- `npm run s.todo.api` to start the development server for the api
+- `npm run storybook` to start the storybook server
+- `npm run build-storybook` to build the storybook app
+
+The monorepo contains the following frameworks:
+
+- [Nx](https://nx.dev) - Smart Monorepos · Fast CI
+- [Angular](https://angular.io) - One framework. Mobile & desktop.
+- [NgRx](https://ngrx.io) - Reactive State for Angular
+- [Tailwind CSS](https://tailwindcss.com) - A utility-first CSS framework for rapid UI development.
+- [Angular Material](https://material.angular.io) - Material Design components for Angular
+- [NestJS](https://nestjs.com) - A progressive Node.js framework for building efficient, reliable and scalable server-side applications.
+- [Storybook](https://storybook.js.org) - The UI component workshop
+- [Jest](https://jestjs.io) - Delightful JavaScript Testing
+- [Cypress](https://www.cypress.io) - Fast, easy and reliable testing for anything that runs in a browser.
+- [Prettier](https://prettier.io) - Opinionated Code Formatter
+- [ESLint](https://eslint.org) - Find and fix problems in your JavaScript code
+
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
