@@ -27,7 +27,7 @@
 <div class="dlc-storybook-review-container__storybook-content">
   <ng-content></ng-content>
 </div>
-<div class="dlc-storybook-review-container__storybook-footer">
+<div class="dlc-storybook-review-container__storybook-footer" *ngIf="showFooter">
   <span class="dlc-storybook-review-container__storybook-footer--link" *ngIf="storybookFilePath">
     Code:
     <a

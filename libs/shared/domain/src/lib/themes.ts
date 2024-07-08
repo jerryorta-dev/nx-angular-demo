@@ -9,16 +9,12 @@ export interface EcThemeDict {
   GREEN: string;
 }
 
-export const EC_THEME_CONFIGS: ThemeConfig[] = [
-  {name: 'EC Default', cssClass: 'ec-default-theme', isDark: true, isDefault: true},
-  {name: 'EC Class', cssClass: 'ec-class-theme', isDark: true, isDefault: false},
-  {name: 'EC Study Group', cssClass: 'ec-study-group-theme', isDark: true, isDefault: false},
-  {name: 'EC Blue', cssClass: 'ec-blue-theme', isDark: true, isDefault: false},
-  {name: 'EC Green', cssClass: 'ec-green-theme', isDark: true, isDefault: false},
-  {name: 'EC Alert Theme', cssClass: 'ec-alert-theme', isDark: true, isDefault: false}
+export const THEME_CONFIGS: ThemeConfig[] = [
+  {name: 'Light', cssClass: 'default-light-theme', isDark: true, isDefault: true},
+  {name: 'Dark', cssClass: 'default-dark-theme', isDark: true, isDefault: false},
 ];
 
-const defaultTheme = EC_THEME_CONFIGS.find(theme => theme.isDefault) || EC_THEME_CONFIGS[0];
+const defaultTheme = THEME_CONFIGS.find(theme => theme.isDefault) || THEME_CONFIGS[0];
 
 /**
  *  Return 'ec-study-group-theme' from ThemeConfig[]

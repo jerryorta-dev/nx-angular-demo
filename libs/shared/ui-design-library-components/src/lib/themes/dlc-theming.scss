@@ -27,6 +27,17 @@
     )
   ));
 
+  $mat-dark-theme: mat.define-theme((
+    color: (
+      theme-type: dark,
+      primary: mat.$magenta-palette,
+      tertiary: mat.$violet-palette,
+    ),
+    density: (
+      scale: 0,
+    )
+  ));
+
   // Include theme styles for core and each component used in your app.
   // Alternatively, you can import and @include the theme mixins for each component
   // that you are using.
@@ -60,8 +71,13 @@
     @include core.material-component-overrides();
   }
 
+  .default-light-theme {
+
+  }
+
   .default-dark-theme {
+    @include mat.all-component-colors($mat-dark-theme);
     @include component.default-dark-theme();
-    @include core.dlc-mat-colors($mat-light-theme);
+    @include core.dlc-mat-colors($mat-dark-theme);
   }
 }

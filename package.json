@@ -3,9 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "clean.cache": "rm -rf node_modules/.cache && rm -rf .angular && rm -rf .nx",
     "s.todo.dev": "npx nx run todo:serve:development",
     "b.todo.dev": "npx nx run todo:build:development",
-    "s.todo.api": "npx nx run todo-api:serve:development"
+    "s.todo.api": "npx nx run todo-api:serve:development",
+    "storybook": "npm run clean.cache && npx nx storybook storybook-app",
+    "build-storybook": "npx nx run storybook-app:build-storybook"
   },
   "private": true,
   "dependencies": {

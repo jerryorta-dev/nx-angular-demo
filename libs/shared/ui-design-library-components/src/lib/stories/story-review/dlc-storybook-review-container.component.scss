@@ -77,7 +77,7 @@ $review-text-color: rgba(255, 255, 255, 0.5);
   &__storybook-content {
     position: absolute;
     top: $header-height;
-    bottom: $footer-height;
+    bottom: 0;
     left: 0;
     right: 0;
     display: block;
@@ -123,5 +123,13 @@ $review-text-color: rgba(255, 255, 255, 0.5);
     margin-top: 25px;
     margin-bottom: 15px;
     color: rgba(255, 255, 255, 0.5);
+  }
+
+  &__show-footer {
+    .dlc-storybook-review-container__storybook-content {
+      bottom: $footer-height;
+
+
+    }
   }
 }

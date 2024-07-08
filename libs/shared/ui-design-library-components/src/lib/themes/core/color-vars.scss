@@ -17,17 +17,17 @@ $custom-light-theme: (
 
 
 $custom-dark-theme: (
-  base: map.get( mat.$blue-palette , 50),
+  base: map.get( mat.$magenta-palette , 50),
 
-  20: map.get( mat.$blue-palette , 20),
+  20: map.get( mat.$magenta-palette , 20),
 
-  40: map.get( mat.$blue-palette , 40),
+  40: map.get( mat.$magenta-palette , 40),
 
-  60: map.get( mat.$blue-palette , 60),
+  60: map.get( mat.$magenta-palette , 60),
 
-  focus: map.get( mat.$blue-palette , 50),
+  focus: map.get( mat.$magenta-palette , 50),
 
-  base-contrast: map.get( mat.$blue-palette , 50),
+  base-contrast: map.get( mat.$magenta-palette , 50),
 );
 
 

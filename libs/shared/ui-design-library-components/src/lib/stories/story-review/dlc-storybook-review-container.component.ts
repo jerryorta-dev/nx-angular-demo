@@ -11,7 +11,7 @@ import {FormControl, ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectChange, MatSelectModule} from '@angular/material/select';
 
-import { EC_THEME_CONFIGS, LinkTagRel, NgPatThemeSwitcherService, ThemeConfig } from '@nx-angular-demo/shared-domain';
+import { THEME_CONFIGS, LinkTagRel, NgPatThemeSwitcherService, ThemeConfig } from '@nx-angular-demo/shared-domain';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 
@@ -30,13 +30,14 @@ import {REVIEW_STATUS} from './dlc-storybook-review.models';
     '[class.dlc-storybook-review-container__draft]': 'reviewStatus === reviewStatusEnum.DRAFT',
     '[class.dlc-storybook-review-container__prototype]':
       'reviewStatus === reviewStatusEnum.PROTOTYPE',
-    '[class.dlc-storybook-review-container__final]': 'reviewStatus === reviewStatusEnum.FINAL'
+    '[class.dlc-storybook-review-container__final]': 'reviewStatus === reviewStatusEnum.FINAL',
+    '[class.dlc-storybook-review-container__show-footer]': 'showFooter'
   }
 })
 export class DlcStorybookReviewContainerComponent implements OnInit, OnDestroy {
   private _onDestroy$ = new Subject<void>();
 
-  themes: ThemeConfig[] = [...EC_THEME_CONFIGS];
+  themes: ThemeConfig[] = [...THEME_CONFIGS];
 
   @Input() figmaUrl: string | null = null;
   @Input() uxUrl: string | null = null;
@@ -49,6 +50,8 @@ export class DlcStorybookReviewContainerComponent implements OnInit, OnDestroy {
 
   @Input() reviewStatus: REVIEW_STATUS = REVIEW_STATUS.DRAFT;
 
+  @Input() showFooter = false;
+
   reviewStatusEnum = REVIEW_STATUS;
 
   themeFormControl = new FormControl();
@@ -57,7 +60,7 @@ export class DlcStorybookReviewContainerComponent implements OnInit, OnDestroy {
     this.themeSwitcherService.setConfig({
       bodyTagClassesToKeep: ['mat-typography'],
       bodyTagClassesToRemove: ['qk-default-theme', 'ed-default-theme'],
-      allThemeConfigs: [...EC_THEME_CONFIGS]
+      allThemeConfigs: [...THEME_CONFIGS]
     });
   }
 
@@ -65,20 +68,16 @@ export class DlcStorybookReviewContainerComponent implements OnInit, OnDestroy {
     this.themeSwitcherService.init({
       links: [
         {
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap',
+          href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap',
           rel: LinkTagRel.STYLESHEET
         },
         {
           href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
           rel: LinkTagRel.STYLESHEET
-        },
-        {
-          href: 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200',
-          rel: LinkTagRel.STYLESHEET
         }
       ],
-      localStorageKey: 'ec-theme',
-      defaultTheme: EC_THEME_CONFIGS[0].cssClass
+      localStorageKey: 'storybook-theme',
+      defaultTheme: THEME_CONFIGS[0].cssClass
     });
     // set default theme
 
