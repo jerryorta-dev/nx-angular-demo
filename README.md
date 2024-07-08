@@ -30,7 +30,7 @@ The monorepo contains the following frameworks:
 
 ## Directory Structure
 
-The monorepo is structured as follows:
+The monorepo is structured as follows ( not including e2e apps ):
 
 ```
 apps/
@@ -54,3 +54,5 @@ libs/
 
 ## Documentation
 This project was generated using [Nx](https://nx.dev). See [README](./docs/nx.md) for more information.
+
+See [Create Nx Workspace](./docs/create-nx-workspace.md) for how I created this architecture.
